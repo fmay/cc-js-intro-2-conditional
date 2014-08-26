@@ -10,7 +10,7 @@ Let's dive right in and see how it works.
 
 @annotation:tour conditions
 #Conditional Statements
->Select 'Basics' from the Rocket menu at the top to load some code.
+>Select 'Basics' from the ![](.guides/an-img/rocket.png) Rocket menu at the top to load some code.
 
 A conditional statement simply tests whether something is true or false and can then execute on more statements if it is true and a different set of statements if false.
 
@@ -455,12 +455,21 @@ x/=10; 	// x=x/10
 ```
 
 ##The '++' and '--' operators
-Finally, here is another useful pair of operators
+Finally, here is another useful pair of operators. These increment or decrement the value of `x` *after* the statement where `x` appears is executed.
 
 ```
 x++;		// x=x+1
 x--;		// x=x-1
 ```
+
+There is also a subtle variation on these, whereby the increment or decrement is done *before* the statement where `x` is found is executed. Don't worry too much about the difference until you see this in action in the 'Loops' module.
+
+```
+++x;		// x=x+1
+--x;		// x=x-1
+```
+
+
 
 @annotation:tour nearlythere
 #Summary
