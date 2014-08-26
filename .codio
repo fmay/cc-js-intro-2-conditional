@@ -3,13 +3,15 @@
 
 	// Run button configuration
   "commands": {
-    "Variables": "~/workspace/.guides/restore.sh 01-variables",
-    "Play": "~/workspace/.guides/restore.sh 02-varplay"
-    
+    "Basics": "~/workspace/.guides/restore.sh 01-basics",
+    "Less & Greater": "~/workspace/.guides/restore.sh 02-less-greater",
+    "Else If": "~/workspace/.guides/restore.sh 03-elseif",
+    "Ternary & Switch": "~/workspace/.guides/restore.sh 04-ternary-switch",
+    "A Few More Operators": "~/workspace/.guides/restore.sh 05-unary"
   },
   
 	// Preview button configuration
-  "preview": {
+  "Preview": {
         "Preview": "https://{{domain}}/{{index}}"
   }
 }
