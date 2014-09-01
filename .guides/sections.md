@@ -2,7 +2,7 @@
 title: CONDITIONAL LOGIC
 files: []
 editable: true
-layout: ""
+layout: 2-panels-tree
 
 ---
 Conditional logic is a mainstay of any programming language. It concerns itself with constructs like this 
