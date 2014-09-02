@@ -12,22 +12,26 @@ Conditional logic is a mainstay of any programming language. It concerns itself 
 Let's dive right in and see how it works.
 ---
 title: Conditional Statements
-files: []
-editable: false
+files:
+  - path: example.js
+    panel: 0
+    ref: ""
+    lineCount: 0
+editable: true
 layout: ""
 
 ---
->Select 'Basics' from the ![](.guides/img/rocket.png) Rocket menu at the top to load some code.
+>The code for 'Basics' module is already loaded in your project.
 
 A conditional statement simply tests whether something is true or false and can then execute on more statements if it is true and a different set of statements if false.
 
-Here is how we write this in Javascript
+See `example.js` for how we write this in Javascript
 
 ```
 var isCold=true;
 
 if(isCold===true) {
-  document.write("Brrrr, it's cold<br/>");
+  document.write("1. Brrrr, it's cold<br/>");
 }
 ```
 However, you can actually leave out the `===true` part, in which case Javacript will assume this is a test for 'true', so
@@ -36,7 +40,7 @@ However, you can actually leave out the `===true` part, in which case Javacript 
 var isCold=true;
 
 if(isCold) {
-  document.write("Brrrr, it's cold<br/>");
+  document.write("2. Yes, it's cold<br/>");
 }
 ```
 
@@ -58,7 +62,7 @@ The not operator is the opposite of the === operator.
 var isCold=false;
 
 if(isCold!==true) {
-  document.write("It's not cold<br/>");
+  document.write("3. It's not cold<br/>");
 }
 ```
 
@@ -70,7 +74,7 @@ We can also write this in shorthand as follows
 var isCold=false;
 
 if(!isCold) {
-  document.write("It's not cold<br/>");
+  document.write("4, No, It's not cold<br/>");
 }
 ```
 ---
@@ -80,22 +84,22 @@ editable: false
 layout: ""
 
 ---
-The next thing you should now about is the `else` statement. This is best explained by looking at the following code
+The next thing you should know about is the `else` statement. This is best explained by looking at the following code
 
 ```
 var isCold=true;
 
 if(isCold) {
-  document.write("Brrrr, it's cold<br/>");
+  document.write("7. Brrrr, it's cold<br/>");
 }
 else {
-  document.write("No, it's not cold<br/>");
+  document.write("8. No, it's not cold<br/>");
 }
 ```
 
-What happens here is that if the `if()` condition it *not* met, then it will instead execute all the code within the `else{}` block.
+What happens here is that if the `if()` condition is *not* met, then it will instead execute all the code within the `else{}` block.
 
-> Make sure you have examined and played around with the 'Basics' code from the Rocket menu before moving on.
+> Make sure you have examined and played around with the 'Basics' code from the ![](.guides/img/rocket.png) Rocket menu before moving on and if you mess things up, just reselect 'Basics' from the menu to restore the original files.
 ---
 title: Testing for less than and greater than
 files: []
@@ -118,10 +122,11 @@ And here is a good example
 var temperature=12;
 
 if(temperature<18) {
-  document.write("Brrrr, it's cold<br/>");
+  document.write("1. Brrrr, it's cold<br/>");
 }
+temperature=32;
 if(temperature>=26) {
-  document.write("It's getting pretty hot<br/>");
+  document.write("2. It's getting pretty hot<br/>");
 }
 ```
 ---
@@ -148,16 +153,16 @@ This is written as
 var temperature=15;
 
 if(temperature<18) {
-  document.write("Brrrr, it's cold<br/>");
+  document.write("3. Brrrr, it's cold<br/>");
 }
 if(temperature>=18 && temperature<28) {
-  document.write("It's really rather pleasant<br/>");
+  document.write("3. It's really rather pleasant<br/>");
 }
 if(temperature<18 || temperature>=28) {
-  document.write("It's not entirely pleasant<br/>");
+  document.write("3. It's not entirely pleasant<br/>");
 }
 if(temperature>=28) {
-  document.write("It's hot<br/>");
+  document.write("3. It's hot<br/>");
 }
 ```
 
@@ -189,7 +194,7 @@ which is true (`true && true` yields true), so the `if` block will execute.
 
 
 ##ORing (||) more formally
-When two things are ORed together, then *either* can be true in order for the result to be true.
+When two things are OR'ed together, then *either* can be true in order for the result to be true.
 
 - `true || true` yields `true`
 - `true || false` yields `true`
@@ -219,10 +224,10 @@ editable: false
 layout: ""
 
 ---
-There are situations where it is very important or even esential to use parentheses in your logical expressions.
+There are situations where it is very important or even essential to use parentheses in your logical expressions.
 
 1. Use them to make your code readable. 
-1. Many epressions will only evaluate correctly if you use parentheses to clearly express your condition.
+1. Many expressions will only evaluate correctly if you use parentheses to clearly express your condition.
 
 Look at the following example which says "it is  'uncomfortable' if the temperature is either between a) 33 and 37 degrees or b) below freezing and above -20". 
 
@@ -231,8 +236,8 @@ We'll assume that temperatures worse than this are unbearable.
 ```
 var temperature=34;
 
-if( temperature>32 && temperature<38 || temperature>-20 && temperature<=0) {
-	document.write("5. Uncomfortable temperature<br/>");
+if( (temperature>32 && temperature<38) || (temperature<=0 && temperature>-20) ) {
+	document.write("4. Uncomfortable temperature<br/>");
 }  
 ```
 
@@ -253,8 +258,8 @@ More important than readability, however, is that these parentheses are very muc
 ```
 var temperature=34;
 
-if( temperature>32 && temperature<38 || temperature>-20 && temperature<=0) {
-	document.write("5. Uncomfortable temperature<br/>");
+if( temperature>32 && temperature<38 || temperature<=0 && temperature>-20) {
+	document.write("4. Uncomfortable temperature<br/>");
 }  
 ```
 
@@ -427,7 +432,7 @@ else {
 ... you can write it like this 
 
 ```
-	var weatherType=1; // Valid values are between 0 and 6
+	var weatherType=3; // Valid values are between 0 and 6
   switch(weatherType) {
     case 0:
       msg = "bitterly cold";
@@ -504,14 +509,14 @@ x/=10; 	// x=x/10
 ```
 
 ##The '++' and '--' operators
-Finally, here is another useful pair of operators. These increment or decrement the value of `x` *after* the statement where `x` appears is executed.
+Finally, here is another useful pair of operators. These increment or decrement the value of `x` *after* the statement where `x` appears and is executed.
 
 ```
 x++;		// x=x+1
 x--;		// x=x-1
 ```
 
-There is also a subtle variation on these, whereby the increment or decrement is done *before* the statement where `x` is found is executed. Don't worry too much about the difference until you see this in action in the 'Loops' module.
+There is also a subtle variation on these, whereby the increment or decrement is done *before* the statement where `x` is found and is executed. Don't worry too much about the difference until you see this in action in the 'Loops' module.
 
 ```
 ++x;		// x=x+1

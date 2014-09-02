@@ -14,12 +14,13 @@ function play() {
   var isCold=true;
 
   // Equals operator
-  if(isCold) {
-    document.write("1. Brrrr, it's cold<br/>");
-  }
   if(isCold===true) {
+    document.write("1. Brrr, it's cold<br/>");
+  }
+  if(isCold) {
     document.write("2. Yes, it's cold<br/>");
   }
+  
 
   // Not operator
   isCold=false;
@@ -46,7 +47,7 @@ function play() {
     document.write("7. Brrrr, it's cold<br/>");
   }
   else {
-    document.write("7. No, it's not cold<br/>");
+    document.write("8. No, it's not cold<br/>");
   }  
   
 }
