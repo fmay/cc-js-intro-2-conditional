@@ -67,7 +67,7 @@ layout: ""
 
 A conditional statement simply tests whether something is true or false and can then execute on more statements if it is true and a different set of statements if false.
 
-See `example.js` for how we write this in Javascript
+See `example.js` for how we write this in Javascript.
 
 ```
 var isCold=true;
@@ -201,13 +201,13 @@ layout: ""
 ---
 Sticking to our temperature theme, what happens if we want to deal with Cold, Pleasant and Hot situations?
 
-Here's the english language approach
+Here's the english language approach.
 
 ```
 If it's less than 18 degrees, then it's cold
 If it's 18 degrees or more **AND** (`&&`) less than 28 degrees then it's pleasant
 Another way of saying this is if its less than 18 degrees **OR** (`||`) it's 28 degrees or more then it's not pleasant
-If it's 28 degrees of more, then it's hot
+If it's 28 degrees or more, then it's hot
 ```
 
 This is written as 
@@ -313,7 +313,7 @@ In this case, we can see that the use of parentheses makes the conditions very c
 Javascript evaluates the contents of the brackets first, as follows
 
 ```
-(true && true) || (true && false)
+(true && true) || (false && true)
 (true) || (false)
 true
 ```
@@ -387,8 +387,8 @@ else {
 There are some important things to note here
 
 - it will run through each test until a condition is true. At this point it will execute the statement(s) within the `{ }` block. Once it has done that it will skip past all of the remaining tests, including the last `else`.
-- in the code above, it result in "It's 'parky' as they say in England"
-- the final `else` `{ }` block will execute if none of the above consitions were met. So, if we set `temperature` to be anything above 28, it will display "It's too hot".
+- in the code above, it results in "It's 'parky' as they say in England"
+- the final `else` `{ }` block will execute if none of the above conditions were met. So, if we set `temperature` to be anything above 28, it will display "It's too hot".
 
 ---
 title: Nested If Statements
@@ -401,7 +401,7 @@ editable: true
 layout: ""
 
 ---
-It is possble to nest if statements like this
+It is possble to nest 'if' statements like this
 
 ```
 var temperature=14;
@@ -478,7 +478,7 @@ Put more formally
 condition ? expr1 : expr2
 ```
 
-Where `expr1` is executed if the condition is true, otherwse `expr2` is evaluated.
+Where `expr1` is executed if the condition is true, otherwise `expr2` is evaluated.
 
 Here's another couple of examples
 
@@ -574,7 +574,7 @@ layout: ""
 
 Javascript offers several very useful assignment operators.
 
-Here are a couple of statements that should be very clear and obvious
+Here are a couple of statements that should be very clear and obvious.
 
 ```
 var x=10;
