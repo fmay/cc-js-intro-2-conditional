@@ -131,7 +131,7 @@ files:
     action: open
     ref: // Adding in the Else bit
     lineCount: 7
-editable: false
+editable: true
 layout: ""
 
 ---
@@ -342,14 +342,17 @@ It should be clear to you that the logic you want to apply is simply unreadable 
 
 So - always use parentheses to correctly mirror your intended logic.
 
-> Before moving on, make sure you have played with the 'Less & Greater' from the ![](.guides/an-img/rocket.png) Rocket menu
+> Before moving on, make sure you have played with the 'Less & Greater' from the ![](.guides/img/rocket.png) Rocket menu
 ---
 title: Else If
 files:
+  - path: "#all"
+    action: close
+    ref: ""
   - path: "#cmd: bash .guides/restore.sh 03-elseif, example.js"
     action: open
-    ref: var temperature=14;
-    lineCount: 20
+    ref: // Else If
+    lineCount: 21
 editable: true
 layout: ""
 
@@ -392,8 +395,8 @@ title: Nested If Statements
 files:
   - path: example.js
     action: open
-    ref: var temperature=14;
-    lineCount: 26
+    ref: // Nested if
+    lineCount: 27
 editable: true
 layout: ""
 
@@ -440,7 +443,7 @@ files:
   - path: "#cmd: bash .guides/restore.sh 04-ternary-switch, example.js"
     action: open
     ref: var temperature=-4;
-    lineCount: 4
+    lineCount: 5
 editable: true
 layout: ""
 
@@ -489,7 +492,7 @@ files:
   - path: example.js
     action: open
     ref: // Switch
-    lineCount: 31
+    lineCount: 28
 editable: false
 layout: ""
 

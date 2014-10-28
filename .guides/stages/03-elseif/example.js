@@ -12,9 +12,9 @@ function play() {
   document.write("ELSE IF AND NESTED IFS<br/><br/>");
 
  
-  // Else If
-  document.write("ELSE IF<br/><br/>");
   
+  document.write("ELSE IF<br/><br/>");
+  // Else If
   var temperature=14;
 
   if(temperature===0) {
@@ -36,9 +36,10 @@ function play() {
     document.write("It's too hot<br/>");    
   }
 
-	// Nested if
+	
   document.write("<br/><br/>NESTED IF<br/><br/>");
-  
+    
+  // Nested if
   var temperature=14;
 
   if(temperature<18) {
