@@ -25,7 +25,7 @@ function play() {
   // Not operator
   isCold=false;
   if(isCold!==true) {
-	  document.write("3. It's not cold<br/>");
+	document.write("3. It's not cold<br/>");
 	}  
   if(!isCold) {
     document.write("4. No, it's not cold<br/>");

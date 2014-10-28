@@ -8,37 +8,47 @@
 
 function play() {
 
-  // UNARY OPERATORS
-  document.write("UNARY OPERATORS<br/><br/>");
+  // CONDITIONAL STATEMENTS
+  document.write("<br/><br/>CONDITIONAL STATEMENTS<br/><br/>");
 
-   
-  var temperature=24;
-  var msg="Message : ";
+  var isCold=true;
 
-  document.write("Initial value : temp=" + temperature + "<br/><br/>");  
+  // Equals operator
+  if(isCold===true) {
+    document.write("1. Brrr, it's cold<br/>");
+  }
+  if(isCold) {
+    document.write("2. Yes, it's cold<br/>");
+  }
   
-  temperature += 6; 
-  document.write("Step 1 :   temp=" + temperature + "<br/><br/>"); 
 
-  temperature *= 10; 
-  document.write("Step 2 :   temp=" + temperature + "<br/><br/>"); 
-  
-  temperature /= 5; 
-  document.write("Step 3 :   temp=" + temperature + "<br/><br/>"); 
+  // Not operator
+  isCold=false;
+  if(isCold!==true) {
+	document.write("3. It's not cold<br/>");
+	}  
+  if(!isCold) {
+    document.write("4. No, it's not cold<br/>");
+  }  
 
-  temperature++;
-  document.write("Step 4 :   temp=" + temperature + "<br/><br/>"); 
+  // Trying to confuse you with two totally illogical ways to express it. If you get these then you've really grasped it
+  isCold=true;
+  if(!isCold===false) {
+    document.write("5. Yes, it's cold (double negative)<br/>");
+  }
 
-  temperature--;
-  document.write("Step 5 :   temp=" + temperature + "<br/><br/>"); 
+  isCold=false;
+  if(!isCold===true) {
+    document.write("6. No, it's not cold (plain confusing)<br/>");
+  }  
 
-	msg += "I've had enough of the temperature examples!"  
-  document.write(msg + "<br/><br/>"); 
+  // Adding in the Else bit
+  if(isCold) {
+    document.write("7. Brrrr, it's cold<br/>");
+  }
+  else {
+    document.write("8. No, it's not cold<br/>");
+  }  
   
 }
-
-
-
-
-
 

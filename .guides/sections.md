@@ -1,8 +1,49 @@
 ---
 title: CONDITIONAL LOGIC
 files: []
-editable: true
+editable: false
 layout: 2-panels-tree
+
+---
+#'Forking' this module
+If you check the url address bar of your browser, if it starts with `https://codio.com/anon/....` then this means it is an anonymous project and any changes you make will be lost when you close down the browser tab. This will be the case if you access the module from the Codio Courses screen.
+
+To avoid losing changes, you can 'fork' the module into your own Codio account where it will appear in your projects list. To do this, select the **'Project->Fork'** menu item and choose a suitable name for the project.
+
+#A few words about the Codio Guide
+Before we start with this module here are a few pointers about using this Codio Guide.
+
+If you've already read this in another Guide then skip to the next section.
+
+![](.guides/img/guides-helper.jpg)
+
+#The File Tree
+The left most panel is the File Tree **(1)**. This is where your project's files are stored. You can open up files you see listed there by clicking on them.
+
+#About the Codio Guide
+The Codio Guide **(2)** is the content you are reading right now. It's worth knowing the following
+
+- if you ever close the Guide tab by mistake, simply open in from the View menu **(3)**.
+- you can expand and collapse the Guide's Table of Contents **(4)** with the Hamburger icon **(5)**
+- you move from one section of the Guide to the next using either the Table of Contents or the Navigation Buttons (6)
+
+#The Rocket Menu
+The Rocket menu **(7)** is a dropdown menu that lets you load code into your file tree when you click it as different sections might want to show different bits of code.
+
+You are usually encouraged to mess around with the live code. It is perfectly likely that you can wreck the code so pressing the Rocket menu button will restore the code again to its original state.
+
+#Previewing
+The Preview button **(8)** lets you run your web application. When you press it, it will open up a preview window so you can play with your app.
+
+#Code Tabs
+When you open some code from the file tree or the Codio Guide opens a file for you automatically, they will appear within a tab **(9)** in one of the panels. You can have several of these open at one time so you may need to click on the respective tab to get to see the file you want.
+
+
+---
+title: Introduction
+files: []
+editable: false
+layout: ""
 
 ---
 Conditional logic is a mainstay of any programming language. It concerns itself with constructs like this 
@@ -14,9 +55,10 @@ Let's dive right in and see how it works.
 title: Conditional Statements
 files:
   - path: example.js
+    action: open
     panel: 0
-    ref: ""
-    lineCount: 0
+    ref: var isCold=true;
+    lineCount: 9
 editable: true
 layout: ""
 
@@ -30,6 +72,7 @@ See `example.js` for how we write this in Javascript
 ```
 var isCold=true;
 
+// Equals operator
 if(isCold===true) {
   document.write("1. Brrrr, it's cold<br/>");
 }
@@ -51,7 +94,11 @@ This is a very common cause of errors for beginners, so if you see unexpected be
 
 ---
 title: "The Not operator \"!\""
-files: []
+files:
+  - path: example.js
+    action: open
+    ref: // Not operator
+    lineCount: 8
 editable: false
 layout: ""
 
@@ -79,7 +126,11 @@ if(!isCold) {
 ```
 ---
 title: Else
-files: []
+files:
+  - path: example.js
+    action: open
+    ref: // Adding in the Else bit
+    lineCount: 7
 editable: false
 layout: ""
 
@@ -102,12 +153,20 @@ What happens here is that if the `if()` condition is *not* met, then it will ins
 > Make sure you have examined and played around with the 'Basics' code from the ![](.guides/img/rocket.png) Rocket menu before moving on and if you mess things up, just reselect 'Basics' from the menu to restore the original files.
 ---
 title: Testing for less than and greater than
-files: []
-editable: false
+files:
+  - path: "#all"
+    action: close
+    ref: ""
+  - path: "#cmd: bash .guides/restore.sh 02-less-greater, example.js"
+    action: open
+    panel: 0
+    ref: var temperature=12;
+    lineCount: 10
+editable: true
 layout: ""
 
 ---
-> Select 'Less & Greater' from the ![](.guides/img/rocket.png) Rocket menu at the top to load some code.
+>We have loaded new content for you but if you need to restore you can do from the ![](.guides/img/rocket.png) Rocket menu, select 'Lesser & Greater'.
 
 As well as testing simple boolean variables, another very common thing is to test for greater than or less than.
 
@@ -131,8 +190,12 @@ if(temperature>=26) {
 ```
 ---
 title: Logical Operators
-files: []
-editable: false
+files:
+  - path: example.js
+    action: open
+    ref: var temperature=15;
+    lineCount: 14
+editable: true
 layout: ""
 
 ---
@@ -219,8 +282,12 @@ which is true (`false || true` is true).
 
 ---
 title: Using parentheses in logical expressions
-files: []
-editable: false
+files:
+  - path: example.js
+    action: open
+    ref: var temperature=34;
+    lineCount: 8
+editable: true
 layout: ""
 
 ---
@@ -278,12 +345,16 @@ So - always use parentheses to correctly mirror your intended logic.
 > Before moving on, make sure you have played with the 'Less & Greater' from the ![](.guides/an-img/rocket.png) Rocket menu
 ---
 title: Else If
-files: []
-editable: false
+files:
+  - path: "#cmd: bash .guides/restore.sh 03-elseif, example.js"
+    action: open
+    ref: var temperature=14;
+    lineCount: 20
+editable: true
 layout: ""
 
 ---
-> Select 'Else If' from the ![](.guides/img/rocket.png) Rocket menu at the top to load some code.
+>We have loaded new content for you but if you need to restore you can do from the ![](.guides/img/rocket.png) Rocket menu, select 'Else If'. 
 
 We can also write if/else statements in the following way
 
@@ -318,8 +389,12 @@ There are some important things to note here
 
 ---
 title: Nested If Statements
-files: []
-editable: false
+files:
+  - path: example.js
+    action: open
+    ref: var temperature=14;
+    lineCount: 26
+editable: true
 layout: ""
 
 ---
@@ -358,19 +433,26 @@ Stare at it for a bit and it should all make sense. You can preview this example
 
 ---
 title: The Conditional (ternary) Operator
-files: []
-editable: false
+files:
+  - path: "#all"
+    action: close
+    ref: ""
+  - path: "#cmd: bash .guides/restore.sh 04-ternary-switch, example.js"
+    action: open
+    ref: var temperature=-4;
+    lineCount: 4
+editable: true
 layout: ""
 
 ---
-> Select 'Ternary and Switch' from the ![](.guides/img/rocket.png) Rocket menu at the top.
+>We have loaded new content for you but if you need to restore you can do from the ![](.guides/img/rocket.png) Rocket menu, select 'Ternary and Switch'. 
 
 Here's a funny little operator, known as the 'ternary' or 'conditional' operator.
 
 Rather than writing this ...
 
 ```
-var temperature=-5;
+var temperature=-4;
 
 if(isCold) {
 	msg="It's freezing";
@@ -403,7 +485,11 @@ var elvisLives = Math.PI > 4 ? "Yep" : "Nope";
 ```
 ---
 title: The Switch Statement
-files: []
+files:
+  - path: example.js
+    action: open
+    ref: // Switch
+    lineCount: 31
 editable: false
 layout: ""
 
@@ -470,12 +556,18 @@ But if you're interested, feel free to [look it up](https://developer.mozilla.or
 
 ---
 title: A few more operators
-files: []
+files:
+  - path: "#all"
+    action: close
+    ref: ""
+  - path: "#cmd: bash .guides/restore.sh 05-unary, example.js"
+    action: open
+    ref: ""
 editable: false
 layout: ""
 
 ---
-> Select 'A Few More Operators' from the ![](.guides/img/rocket.png) Rocket menu at the top.
+>We have loaded new content for you but if you need to restore you can do from the ![](.guides/img/rocket.png) Rocket menu, select 'A Few More Opertators'. 
 
 Javascript offers several very useful assignment operators.
 
