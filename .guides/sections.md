@@ -1,48 +1,46 @@
 ---
 title: CONDITIONAL LOGIC
 files: []
-editable: false
 layout: 2-panels-tree
 
 ---
-#'Forking' this module
+# 'Forking' this module
 If you check the url address bar of your browser, if it starts with `https://codio.com/anon/....` then this means it is an anonymous project and any changes you make will be lost when you close down the browser tab. This will be the case if you access the module from the Codio Courses screen.
 
 To avoid losing changes, you can 'fork' the module into your own Codio account where it will appear in your projects list. To do this, select the **'Project->Fork'** menu item and choose a suitable name for the project.
 
-#A few words about the Codio Guide
+# A few words about the Codio Guide
 Before we start with this module here are a few pointers about using this Codio Guide.
 
 If you've already read this in another Guide then skip to the next section.
 
 ![](.guides/img/guides-helper.jpg)
 
-#The File Tree
+# The File Tree
 The left most panel is the File Tree **(1)**. This is where your project's files are stored. You can open up files you see listed there by clicking on them.
 
-#About the Codio Guide
+# About the Codio Guide
 The Codio Guide **(2)** is the content you are reading right now. It's worth knowing the following
 
 - if you ever close the Guide tab by mistake, simply open in from the View menu **(3)**.
 - you can expand and collapse the Guide's Table of Contents **(4)** with the Hamburger icon **(5)**
 - you move from one section of the Guide to the next using either the Table of Contents or the Navigation Buttons (6)
 
-#The Rocket Menu
+# The Rocket Menu
 The Rocket menu **(7)** is a dropdown menu that lets you load code into your file tree when you click it as different sections might want to show different bits of code.
 
 You are usually encouraged to mess around with the live code. It is perfectly likely that you can wreck the code so pressing the Rocket menu button will restore the code again to its original state.
 
-#Previewing
+# Previewing
 The Preview button **(8)** lets you run your web application. When you press it, it will open up a preview window so you can play with your app.
 
-#Code Tabs
+# Code Tabs
 When you open some code from the file tree or the Codio Guide opens a file for you automatically, they will appear within a tab **(9)** in one of the panels. You can have several of these open at one time so you may need to click on the respective tab to get to see the file you want.
 
 
 ---
 title: Introduction
 files: []
-editable: false
 layout: ""
 
 ---
@@ -59,7 +57,6 @@ files:
     panel: 0
     ref: var isCold=true;
     lineCount: 9
-editable: true
 layout: ""
 
 ---
@@ -87,7 +84,7 @@ if(isCold) {
 }
 ```
 
-##The '===' is really important
+## The '===' is really important
 It is very important to use `===` when testing whether the left operator is equal to the right operator. If you used just `=` you would assign the right operator to the left one.
 
 This is a very common cause of errors for beginners, so if you see unexpected behavior, then you check you have written this correctly.
@@ -99,7 +96,6 @@ files:
     action: open
     ref: // Not operator
     lineCount: 8
-editable: false
 layout: ""
 
 ---
@@ -131,7 +127,6 @@ files:
     action: open
     ref: // Adding in the Else bit
     lineCount: 7
-editable: true
 layout: ""
 
 ---
@@ -162,7 +157,6 @@ files:
     panel: 0
     ref: var temperature=12;
     lineCount: 10
-editable: true
 layout: ""
 
 ---
@@ -195,7 +189,6 @@ files:
     action: open
     ref: var temperature=15;
     lineCount: 14
-editable: true
 layout: ""
 
 ---
@@ -203,12 +196,13 @@ Sticking to our temperature theme, what happens if we want to deal with Cold, Pl
 
 Here's the english language approach.
 
-```
+
 If it's less than 18 degrees, then it's cold
 If it's 18 degrees or more **AND** (`&&`) less than 28 degrees then it's pleasant
+
 Another way of saying this is if its less than 18 degrees **OR** (`||`) it's 28 degrees or more then it's not pleasant
 If it's 28 degrees or more, then it's hot
-```
+
 
 This is written as 
 
@@ -231,7 +225,7 @@ if(temperature>=28) {
 
 Notice that for a temperature of 15, you will get 2 lines written to the preview window. Figure out which ones.
 
-##ANDing (&&) more formally
+## AND'ing (&&) more formally
 When two things are ANDed together, then *both* must be true in order for the result to be true.
 
 - `true && true` yields `true`
@@ -256,7 +250,7 @@ if( true && true)
 which is true (`true && true` yields true), so the `if` block will execute.
 
 
-##ORing (||) more formally
+## OR'ing (||) more formally
 When two things are OR'ed together, then *either* can be true in order for the result to be true.
 
 - `true || true` yields `true`
@@ -287,7 +281,6 @@ files:
     action: open
     ref: var temperature=34;
     lineCount: 8
-editable: true
 layout: ""
 
 ---
@@ -319,7 +312,7 @@ true
 ```
 So, it is an uncomfortable temperature.
 
-##Without parentheses
+## Without parentheses
 More important than readability, however, is that these parentheses are very much necessary. If we left them out, we would have
 
 ```
@@ -353,7 +346,6 @@ files:
     action: open
     ref: // Else If
     lineCount: 21
-editable: true
 layout: ""
 
 ---
@@ -397,7 +389,6 @@ files:
     action: open
     ref: // Nested if
     lineCount: 27
-editable: true
 layout: ""
 
 ---
@@ -444,7 +435,6 @@ files:
     action: open
     ref: var temperature=-4;
     lineCount: 5
-editable: true
 layout: ""
 
 ---
@@ -493,7 +483,6 @@ files:
     action: open
     ref: // Switch
     lineCount: 28
-editable: false
 layout: ""
 
 ---
@@ -566,7 +555,6 @@ files:
   - path: "#cmd: bash .guides/restore.sh 05-unary, example.js"
     action: open
     ref: ""
-editable: false
 layout: ""
 
 ---
@@ -603,7 +591,7 @@ x*=10; 	// x=x*10
 x/=10; 	// x=x/10
 ```
 
-##The '++' and '--' operators
+## The '++' and '--' operators
 Finally, here is another useful pair of operators. These increment or decrement the value of `x` *after* the statement where `x` appears and is executed.
 
 ```
